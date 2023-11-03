@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Prise Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "app.js" ></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <div class = center >
+        <h2>Living Area(sqft) </h2>
+        <input class ="area" type="number" id="uisqft" class="floatlabel" name="Squareft" required="true">
+        <h2>Bedroom(s)</h2>
+        <input class ="bedroom" type="number" id="uibedroom" class="floatlabel" name="bedrooms" required="true" min="0" max="10" >
+        <h2>Bathroom(s)</h2>
+        <input class ="bathroom" type="number" id="uibathroom" class="floatlabel" name="bathroom" required="true" min="0" max="10" >
+        <h2>Lot Area(if any) </h2>
+        <input class ="ltarea" type="number" id="uiltarea" class="floatlabel" name="ltarea" required="true" min="0"  >
+        <h2>Number of floors</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-floor-1" name="uifloor" value="1"/>
+            <label for="radio-floor-1">1</label>
+            <input type="radio" id="radio-floor-2" name="uifloor" value="2"/>
+            <label for="radio-floor-2">2</label>
+            <input type="radio" id="radio-floor-3" name="uifloor" value="3"/>
+            <label for="radio-floor-3">3</label>
+            <input type="radio" id="radio-floor-4" name="uifloor" value="4"/>
+            <label for="radio-floor-4">4</label>
+            <input type="radio" id="radio-floor-5" name="uifloor" value="5"/>
+            <label for="radio-floor-5">5</label>
+	    </div>
+        <h2>How is the view(0-4)</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-view-0" name="uiview" value="0"/>
+            <label for="radio-view-0">0</label>
+            <input type="radio" id="radio-view-1" name="uiview" value="1"/>
+            <label for="radio-view-1">1</label>
+            <input type="radio" id="radio-view-2" name="uiview" value="2"/>
+            <label for="radio-view-2">2</label>
+            <input type="radio" id="radio-view-3" name="uiview" value="3"/>
+            <label for="radio-view-3">3</label>
+            <input type="radio" id="radio-view-4" name="uiview" value="4"/>
+            <label for="radio-view-4">4</label>
+	    </div>
+        <h2>Condition of the house(1-5)</h2>
+        <div class="switch-field">
+            <input type="radio" id="radio-condition-1" name="uicondition" value="1"/>
+            <label for="radio-condition-1">1</label>
+            <input type="radio" id="radio-condition-2" name="uicondition" value="2"/>
+            <label for="radio-condition-2">2</label>
+            <input type="radio" id="radio-condition-3" name="uicondition" value="3"/>
+            <label for="radio-condition-3">3</label>
+            <input type="radio" id="radio-condition-4" name="uicondition" value="4"/>
+            <label for="radio-condition-4">4</label>
+            <input type="radio" id="radio-condition-5" name="uicondition" value="5"/>
+            <label for="radio-condition-5">5</label>
+	    </div>
+        <h2>Basement area(if any)</h2>
+        <input class ="basement" type="number" id="uibasement" class="floatlabel" name="basement" required="true" min="0"  >
+        <div>
+            <h2>City</h2>
+        </div>
+        <select class="city" name="" id="uicity">
+            <option value=" " disabled="disabled" selected="selected">Choose a City</option>
+        </select>
+        <h2></h2>
+        <button class="submit" onclick="onClickedEstimatePrices()" type="button"> Estimate Price </button>
+        <div id="uiEstimatedPrice" class="result"> <h2></h2> </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
